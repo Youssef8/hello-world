@@ -1,0 +1,5 @@
+# Pour Désactiver le hotlinking de vos images
+RewriteEngine on
+RewriteCond %{HTTP_REFERER} !^$
+RewriteCond %{HTTP_REFERER} !^http(s)?://(www\.)?votresite.domaine [NC]
+RewriteRule \.(jpg|jpeg|png|gif)$ - [NC,F,L]
